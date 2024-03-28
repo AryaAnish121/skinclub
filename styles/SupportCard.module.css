@@ -1,0 +1,162 @@
+.card {
+    display: flex;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.card:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.image_outer {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    background: #F8F8F8;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail_main h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4C4D4F;
+}
+
+.detail_main p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #4C4D4F80;
+}
+
+.button {
+    color: #fff;
+    background: #4C4D4F;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 33px;
+}
+
+.button span {
+    margin-left: 7px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    .image_outer {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image_outer img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .detail_main {
+        width: calc(100% - 62px);
+    }
+
+    .detail_main h3 {
+        font-size: 12px;
+    }
+
+    .detail_main p {
+        font-size: 10px;
+    }
+
+    .button {
+        width: 62px;
+        height: 30px;
+    }
+
+    .button img {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .image_outer {
+        width: 32px;
+        height: 32px;
+    }
+
+    .image_outer img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .detail_main {
+        width: calc(100% - 62px);
+    }
+
+    .detail_main h3 {
+        font-size: 12px;
+    }
+
+    .detail_main p {
+        font-size: 10px;
+    }
+
+    .button {
+        width: 55px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .button img {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .image_outer {
+        width: 32px;
+        height: 32px;
+    }
+
+    .image_outer img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .detail_main {
+        width: calc(100% - 55px);
+    }
+
+    .detail_main h3 {
+        font-size: 10px;
+    }
+
+    .detail_main p {
+        font-size: 8px;
+    }
+
+    .button {
+        width: 55px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .button img {
+        width: 10px;
+        height: 10px;
+    }
+}
