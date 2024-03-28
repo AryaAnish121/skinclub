@@ -175,9 +175,11 @@ const Content = () => {
     });
 
     const [tab, setTab] = useState("users");
+    const [current, setCurrent] = useState("Users management");
 
     const handleClick = (e) => {
-        setTab(e);
+        setTab(e[0]);
+        setCurrent(e[1]);
     };
 
     return (
@@ -189,7 +191,7 @@ const Content = () => {
                     </div>
                     <div className={styles.management}>
                         <div className={styles.select}>
-                            <p>Appointment management</p>
+                            <p>{current}</p>
                             <Image
                                 src="/icons/select.svg"
                                 alt="dropdown"
@@ -339,50 +341,69 @@ const Content = () => {
                             <div className={styles.options}>
                                 <p
                                     onClick={() => {
-                                        handleClick("users");
+                                        handleClick(["users", "Users management"]);
                                     }}
-                                    className={tab == "users" ? styles.active : ""}
-
+                                    className={
+                                        tab == "users" ? styles.active : ""
+                                    }
                                 >
                                     Users
                                 </p>
                                 <p
                                     onClick={() => {
-                                        handleClick("appointments");
+                                        handleClick(["appointments", "Appointments management"]);
                                     }}
-                                    className={tab == "appointments" ? styles.active : ""}
+                                    className={
+                                        tab == "appointments"
+                                            ? styles.active
+                                            : ""
+                                    }
                                 >
                                     Appointments
                                 </p>
                                 <p
                                     onClick={() => {
-                                        handleClick("transactions");
+                                        handleClick(["transactions", "Transaction management"]);
                                     }}
-                                    className={tab == "transactions" ? styles.active : ""}
+                                    className={
+                                        tab == "transactions"
+                                            ? styles.active
+                                            : ""
+                                    }
                                 >
                                     Transactions
                                 </p>
                                 <p
                                     onClick={() => {
-                                        handleClick("inventory");
+                                        handleClick(["inventory", "Inventory management"]);
                                     }}
-                                    className={tab == "inventory" ? styles.active : ""}
+                                    className={
+                                        tab == "inventory" ? styles.active : ""
+                                    }
                                 >
                                     Inventory
                                 </p>
                                 <p
                                     onClick={() => {
-                                        handleClick("patientRecords");
+                                        handleClick(["patientRecords", "Patient's Records management"]);
                                     }}
-                                    className={tab == "patientRecords" ? styles.active : ""}
+                                    className={
+                                        tab == "patientRecords"
+                                            ? styles.active
+                                            : ""
+                                    }
                                 >
                                     Patient Records
                                 </p>
                                 <p
                                     onClick={() => {
-                                        handleClick("doctorPerformance");
+                                        handleClick(["doctorPerformance", "Doctor Performance management"]);
                                     }}
-                                    className={tab == "doctorPerformance" ? styles.active : ""}
+                                    className={
+                                        tab == "doctorPerformance"
+                                            ? styles.active
+                                            : ""
+                                    }
                                 >
                                     Doctor&apos;s Performance
                                 </p>

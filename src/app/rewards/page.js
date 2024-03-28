@@ -1,12 +1,12 @@
 "use client";
 
-import styles from "../../../styles/Dashboard.module.css";
+import styles from "../../../styles/Reward.module.css";
 import SidePannel from "../components/SidePannel";
 import TopNav from "../components/TopNav";
-import Content from "../components/Content";
+import RewardContent from "../components/Reward";
 import { useState } from "react";
 
-const Dashboard = () => {
+const Reward = () => {
     const [nav, setNav] = useState(false);
 
     const handleClick = () => {
@@ -19,10 +19,10 @@ const Dashboard = () => {
             <TopNav handleClick={handleClick} />
             <div className={styles.display}>
                 <SidePannel nav={nav} handleClick={handleClick} />
-                <Content />
+                <RewardContent />
             </div>
         </>
     );
 };
 
-export default Dashboard;
+export default Reward;
